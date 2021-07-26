@@ -2,11 +2,7 @@ version: 0.2
 
 env:
   variables:
-<<<<<<< HEAD
-    _PROJECT_NAME: "book"
-=======
-    _PROJECT_NAME: "book"
->>>>>>> cd4eb706daa4740397e401a2ac4c1d12b860e70d
+    _PROJECT_NAME: "book"  
     _ECR_NAME: "user11"
     _NAMESPACE: "user11" 
     _AWS_REGION: "ap-southeast-1" 
