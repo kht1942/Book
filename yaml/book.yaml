@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: books
-  namespace: skcc04-ns
+  namespace: user11
   labels:
     app: books
 spec:
@@ -17,16 +17,16 @@ spec:
     spec:
       containers:
         - name: books
-          image: 879772956301.dkr.ecr.ap-northeast-1.amazonaws.com/user04-order:latest
+          image: 879772956301.dkr.ecr.ap-southeast-1.amazonaws.com/user11-book:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
-            - name: api.cafe.url
+            - name: api.museum.url
               valueFrom:
                 configMapKeyRef:
                   name: my-config
-                  key: api.cafe.url
+                  key: api.museum.url
           readinessProbe:
             httpGet:
               path: '/actuator/health'

@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: dr-museum
-  namespace: skcc04-ns
+  namespace: user11
 spec:
   host: museums
   trafficPolicy:

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: books
-  namespace: skcc04-ns
+  namespace: user11
   labels:
     app: books
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: books
-          image: 879772956301.dkr.ecr.ap-northeast-1.amazonaws.com/user04-order:latest
+          image: 879772956301.dkr.ecr.ap-southeast-1.amazonaws.com/user11-book:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -34,7 +34,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: books
-  namespace: skcc04-ns
+  namespace: user11
   labels:
     app: books
 spec:
