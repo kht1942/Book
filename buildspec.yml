@@ -62,7 +62,7 @@ phases:
           name: my-config
           namespace: $_NAMESPACE
         data:
-          api.cafe.url: http://CafeManage:8080
+          api.museum.url: http://Museums:8080
         EOF
       - |
         cat  <<EOF | kubectl apply -f -
@@ -106,11 +106,11 @@ phases:
                     periodSeconds: 5
                     failureThreshold: 5  
                   env:
-                    - name: api.cafe.url
+                    - name: api.museum.url
                       valueFrom:
                         configMapKeyRef:
                           name: my-config
-                          key: api.cafe.url      
+                          key: api.museum.url      
         EOF
 cache:
   paths:
