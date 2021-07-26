@@ -4,4 +4,4 @@ metadata:
   name: my-config
   namespace: user11
 data:
-  api.cafe.url: http://Books:8080
+  api.museum.url: http://Books:8080
