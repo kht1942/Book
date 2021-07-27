@@ -30,6 +30,11 @@ public class Book {
         Requested requested = new Requested();
         BeanUtils.copyProperties(this, requested);
         requested.publishAfterCommit();
+        try {
+            Thread.currentThread().sleep((long) (400 + Math.random() * 220));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 
