@@ -4,7 +4,7 @@ metadata:
   name: dr-museum
   namespace: user11
 spec:
-  host: museums
+  host: museum
   trafficPolicy:
     connectionPool:
       http:
