@@ -54,11 +54,11 @@ api:
 #        isolation:
 #          strategy: SEMAPHORE
 
-#hystrix:
-#  command:
+hystrix:
+  command:
     # 전역설정
-#    default:
-#      execution.isolation.thread.timeoutInMilliseconds: 100
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 100
 
 ---
 
