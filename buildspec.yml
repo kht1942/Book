@@ -62,7 +62,7 @@ phases:
           name: my-config
           namespace: $_NAMESPACE
         data:
-          api.museum.url: http://Museums:8080
+          api.museum.url: http://Book:8080
         EOF
       - |
         cat  <<EOF | kubectl apply -f -

@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: books
+  name: book
   namespace: user11
   labels:
-    app: books
+    app: book
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: books
+      app: book
   template:
     metadata:
       labels:
-        app: books
+        app: book
     spec:
       containers:
-        - name: books
+        - name: book
           image: 879772956301.dkr.ecr.ap-southeast-1.amazonaws.com/user11-book:latest
           imagePullPolicy: Always
           ports:
@@ -49,13 +49,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: books
-  namespace: skcc04-ns
+  name: book
+  namespace: user11
   labels:
-    app: books
+    app: book
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: books
+    app: book

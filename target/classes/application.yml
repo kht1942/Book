@@ -24,7 +24,7 @@ spring:
                   serde: org.apache.kafka.common.serialization.Serdes$StringSerde
       bindings:
         event-in:
-          group: OrderManage
+          group: Book
           destination: local
           contentType: application/json
         event-out:
@@ -79,7 +79,7 @@ spring:
                   serde: org.apache.kafka.common.serialization.Serdes$StringSerde
       bindings:
         event-in:
-          group: OrderManage
+          group: Book
           destination: local
           contentType: application/json
         event-out:
@@ -88,4 +88,4 @@ spring:
 
 api:
  museum:
-    url: http://Museums:8080
+    url: http://Book:8080

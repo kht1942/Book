@@ -88,4 +88,4 @@ spring:
 
 api:
  museum:
-    url: http://Books:8080
+    url: http://Book:8080

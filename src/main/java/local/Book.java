@@ -19,10 +19,10 @@ public class Book {
     @PostPersist
     public void onPostPersist(){;
 
-        // 주문 요청함 ( Req / Res : 동기 방식 호출)
+        //  Req / Res : 동기 방식 호출
         local.external.Museum museum = new local.external.Museum();
         museum.setMuseumId(getMuseumId());
-        // mappings goes here
+        // Mapping
         BookManageApplication.applicationContext.getBean(local.external.MuseumService.class)
             .bookRequest(museum.getMuseumId(),museum);
 
